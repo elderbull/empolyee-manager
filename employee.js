@@ -1,3 +1,4 @@
+// const Manager = require("./manager");
 
 class Employee {
     constructor(name,salary,title, manager = null) {
@@ -5,10 +6,10 @@ class Employee {
         this.salary = salary;
         this.title = title;
         this.manager = manager;
-    }
-
-
-
+        if (this.manager) {
+          this.manager.addEmployee(this);
+        }
+}
 }
 
 /********   Exporting ************/

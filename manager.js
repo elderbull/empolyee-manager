@@ -2,8 +2,9 @@
 const Employee = require('./employee')
 
 class Manager extends Employee {
-    constructor(name, salary, title, manager, employees) {
-        super(name, salary, title, manager);
+    constructor(name, salary, title, manager = null, employees) {
+        super(name, salary, title, manager= null);
+        this.manager = manager;
         this.employees = []
     }
 
@@ -20,11 +21,6 @@ const leo = new Employee('Leonardo', 90000, 'Ninja', splinter);
 const mikey = new Employee('Michelangelo', 90000, 'Ninja', splinter);
 const donnie = new Employee('Donatello', 90000, 'Ninja', splinter);
 const raph = new Employee('Raphael', 90000, 'Ninja', splinter);
-
-splinter.addEmployee(leo);
-splinter.addEmployee(mikey);
-splinter.addEmployee(donnie);
-splinter.addEmployee(raph);
 
 console.log('After: ', splinter);
 
