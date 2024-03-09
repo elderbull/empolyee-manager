@@ -2,7 +2,7 @@
 class Employee {
     constructor(name,salary,title, manager = null) {
         this.name = name;
-        this.salaray = salary;
+        this.salary = salary;
         this.title = title;
         this.manager = manager;
     }
@@ -13,7 +13,7 @@ class Employee {
 
 /********   Exporting ************/
 try {
-    module.exports.employee = Employee
+    module.exports = Employee
   } catch {
     module.exports = null;
   }
